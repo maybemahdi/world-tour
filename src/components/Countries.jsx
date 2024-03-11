@@ -15,7 +15,6 @@ const Countries = () => {
 
   const [visitedCountry, setVisitedCountry] = useState([]);
   const handleVisited = (country) => {
-    console.log("visited", country.name.common);
     const newVisited = [...visitedCountry, country];
     setVisitedCountry(newVisited);
   };
@@ -26,7 +25,7 @@ const Countries = () => {
         <h3 className="font-bold">Visited Country</h3>
         <ul>
           {visitedCountry.map((country) => (
-            <li key={country.cca3}>{country.name.common}</li>
+            <li key={country.cca3}>You Visited {country.name.common}</li>
           ))}
         </ul>
       </div>
